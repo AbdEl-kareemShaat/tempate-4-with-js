@@ -183,3 +183,25 @@ gallary.forEach((img) => {
 
   });
 });
+
+
+// nav bollit sitting 
+const bollits = document.querySelectorAll(".nav-bolits .bolit");
+
+// links sitting
+const links = document.querySelectorAll(".header-area ul li a");
+
+function goSomeWhere(elements){
+
+elements.forEach((ele) => {
+  ele.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(e.target.dataset.section).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
+};
+goSomeWhere(bollits);
+goSomeWhere(links);

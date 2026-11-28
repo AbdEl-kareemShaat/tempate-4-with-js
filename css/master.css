@@ -27,6 +27,7 @@ body{
   left: -200px;
   transition: .3s;
   z-index: 100;
+  border: 1px solid #ccc;
 }
 .setting-btn-contain{
   background-color: white;
@@ -467,3 +468,112 @@ body{
   margin: 0 auto 50px;
 }
 /* End Our Feturs Section  */
+/* Start testimonals section  */
+.testimonals{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.testimonals::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  background-color: #333;
+  right: 0;
+}
+.testimonals::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+}
+.testimonals h2{
+  position: relative;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+  color: white;
+}
+.testimonals .container .test-box{
+  position: relative;
+  z-index: 2;
+  width: calc(98% / 3);
+  float: left;
+  background-color: white;
+  padding: 15px;
+}
+.testimonals .container .test-box:not(:last-of-type){
+  margin-right: 1%;
+}
+.testimonals .container .test-box > p{
+  color: #767676;
+  font-style: italic;
+  margin: 0 0 15px 0;
+}
+.testimonals .container .test-box img{
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+.testimonals .container .test-box h4{
+  margin: 20px 0 -12px 0;
+  padding-top: 15px;
+}
+.testimonals .container .test-box .personal-detail p{
+  color: #767676;
+
+}
+
+/* End testimonals section  */
+/* Start nav bolits section  */
+.nav-bolits{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+  z-index: 1000;
+}
+.nav-bolits .bolit{
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  width: 20px;
+  margin: 0 auto 15px auto;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-bolits .bolit .toltip{
+  position: absolute;
+  background-color: var(--main-color);
+  width: 100px;
+  top: -5px;
+  right: 35px;
+  color: white;
+  padding: 5px;
+  display: none;
+  text-align: center;
+  cursor: default;
+  pointer-events: none;
+}
+.nav-bolits .bolit:hover .toltip{
+  display: block;
+
+}
+.nav-bolits .bolit .toltip::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -28px;
+  border: 14px solid;
+  border-color: transparent transparent transparent var(--main-color);
+}
+/* End nav bolits section  */
